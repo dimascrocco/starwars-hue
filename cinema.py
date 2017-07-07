@@ -11,9 +11,19 @@ for f in frames:
 
 frames = texto.split("[H")
 
-for f in frames:
-    #sys.exec("clear")
+def clear():
     print(chr(27) + "[2J")
 
+def delay():
+    o = open("config.cfg")
+    cfg = o.readlines()
+    duration = float(cfg[0])
+    time.sleep(duration)
+
+for f in frames:
+    clear()
     print f
-    time.sleep(0.200)
+    try:
+        delay()
+    except:
+        print "" 
