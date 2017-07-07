@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -e "starwars.txt" ]; then 
+	echo "filme encontrado..."
+else
+	tar -xzf starwars.tgz
+fi
+
+python cinema.py
