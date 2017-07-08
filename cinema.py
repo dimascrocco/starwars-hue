@@ -10,6 +10,16 @@ for f in frames:
     texto += f
 
 frames = texto.split("[H")
+print "frames", len(frames)
+
+
+
+frame = int(sys.argv[1])
+print "frame", frame
+print frames[frame]
+
+exit()
+
 
 def clear():
     print(chr(27) + "[2J")
